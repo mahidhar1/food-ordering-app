@@ -16,6 +16,7 @@ export default function Shop({ shopDetails, productList }) {
         <meta name="description" content="Millets in india" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Layout shopId={shopDetails?._id}>
         <FoodList productList={productList} shopId={shopDetails?._id} />
       </Layout>

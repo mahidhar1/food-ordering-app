@@ -8,7 +8,7 @@ function Layout({ children, shopId }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/shops/${shopId}`)
+      .get(`/api/shops/${shopId}`)
       .then((res) => setShopDetails(res?.data?.shop))
       .catch((error) => console.log(error));
   }, [shopId]);
