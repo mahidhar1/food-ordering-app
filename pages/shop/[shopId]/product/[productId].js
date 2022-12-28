@@ -24,7 +24,7 @@ const Product = ({ product }) => {
         <div className={styles.left}>
           <div className={styles.imgContainer}>
             <Image
-              src={product?.image}
+              src={product?.image?.filePath}
               objectFit="contain"
               layout="fill"
               alt=""
