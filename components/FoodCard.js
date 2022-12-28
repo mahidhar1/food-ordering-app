@@ -6,12 +6,13 @@ const fallbackImageUrl =
   "https://cdn.shopify.com/s/files/1/0483/7484/1507/products/KodoMillet2_1080x.jpg?v=1667813393";
 
 const FoodCard = ({ shopId, data }) => {
+  console.log(data);
   return (
     <div className={styles.container}>
       <Link href={`/shop/${shopId}/product/${data?._id}`}>
-        {typeof data?.image === "string" &&
-        data?.image.startsWith("https://") ? (
-          <Image src={data?.image} alt="" width="150" height="150" />
+        {typeof data?.image?.filePath === "string" &&
+        data?.image?.filePath?.startsWith("https://") ? (
+          <Image src={data?.image?.filePath} alt="" width="150" height="150" />
         ) : (
           <Image src={fallbackImageUrl} alt="" width="150" height="150" />
         )}
